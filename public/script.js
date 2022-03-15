@@ -22,7 +22,7 @@ window.addEventListener('load', (e) => {
       call.answer(stream)
       call.on('stream', stream => {
         if(!peerList.includes(call.peer)) {
-          const video = document.createElement('audio')
+          const video = document.createElement('video')
           addRemoteVideo(video, stream)
           peerList.push(call.peer)
         }
